@@ -20,7 +20,7 @@ env:
 
 jobs:  
   login:  
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-22.04  
   
     steps:  
       - name: Checkout repository  
@@ -40,4 +40,4 @@ jobs:
       - name: Login into Serv00/CT8
         run: |  
           set -e  
-          xvfb-run --server-args="-screen 0 1280x1024x24" node src/main.js --no-sandbox
+          xvfb-run --server-args="-screen 0 1280x1024x24" node src/main.js
